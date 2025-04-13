@@ -72,6 +72,7 @@ nav {
 
 nav h1 {
     color: var(--primary-color);
+    font-size: 400%;
 }
 
 nav a {
@@ -129,11 +130,76 @@ footer {
 }
 
 .privacy-notice {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+.intro {
+    /* The image used */
+    background-image: url("../images/iPolish\ Everywhere.jpg");
+}
+
+.instructions {
+    /* The image used */
+    background-image: url("../images/iPolish-folded2.jpg");
+}
+
+.parallax {
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: 15px white;
+    border-style: solid none;
+}
+
+.parallax-column {
+    background-color: white;
+    width: 50%;
+}
+
+.motto {
+    display: flex;
+    align-items: center;
+    padding-left: 12rem;
+    min-height: 485px;
+}
+
+.motto h1 {
+    font-size: 300%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 @media screen and (max-width: 900px) {
+    .privacy-notice {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .motto {
+        padding-left: 5rem;
+    }
+
+    .motto h1 {
+        font-size: 200%;
+    }
+
+    .instructions {
+        /* The image used */
+        background-image: url("../images/iPolish-folded.jpg");
+    }
+
     nav {
         padding: 1.5rem 1rem;
     }
