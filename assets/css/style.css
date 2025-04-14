@@ -267,6 +267,27 @@ input[type=reset] {
 }
 
 @media screen and (max-width: 900px) {
+    .motto {
+        display: flex;
+        align-items: center;
+        padding-left: 8rem;
+        min-height: 185px;
+    }
+
+    .parallax {
+        /* Set a specific height */
+        min-height: 200px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        border: 15px white;
+        border-style: solid none;
+    }
+
     .card-flex {
         display: flex;
         flex-direction: column;
