@@ -266,7 +266,21 @@ input[type=reset] {
     max-width: 200px;
 }
 
+/* FIX FOR PARALLAX ON SAFARI NOT WORKING */
+@media all and (hover: hover) {
+
+    .et_pb_section_parallax .et_pb_parallax.css,
+    .et_pb_slides .et_parallax_bg.et_pb_parallax.css {
+        background-attachment: fixed !important;
+    }
+}
+
 @media screen and (max-width: 900px) {
+    .parallax-column {
+        background-color: white;
+        width: 50%;
+    }
+
     .motto {
         display: flex;
         align-items: center;
