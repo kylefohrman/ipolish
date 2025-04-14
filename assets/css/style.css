@@ -181,7 +181,42 @@ footer {
     width: 50%;
 }
 
+.graphic-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+    align-items: center;
+}
+
+.card-wrapper img {
+    padding: 1.25rem;
+}
+
+/* Skills */
+.card {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.card-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.graphic {
+    max-width: 300px;
+}
+
 @media screen and (max-width: 900px) {
+    .card-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
     .privacy-notice {
         padding-left: 5rem;
         padding-right: 5rem;
