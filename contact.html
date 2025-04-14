@@ -39,37 +39,29 @@
         </button>
     </nav>
 
-    <h1 style="text-align: center;">Contact Us</h1><br>
+    <h1 style="text-align: center; padding-top:5rem;">Contact Us</h1>
 
     <!-- TODO: Change form email to send to info@ipolish.fashion -->
-    <div class="privacy-notice" style="display:flex; align-content: center;">
-        <div style="width:30%; float:left"></div>
-        <div>
-            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mdkebrpr"
-                method="post">
-                <fieldset id="fs-frm-inputs">
-                    <label for="full-name">Full Name</label>
-                    <br>
-                    <input type="text" name="name" id="full-name" placeholder="Troy Fohrman" required="">
-                    <br>
-                    <label for="email-address">Email Address</label>
-                    <br>
-                    <input type="email" name="_replyto" id="email-address" placeholder="info@ipolish.fashion"
-                        required="">
-                    <br>
-                    <label for="message">Message</label>
-                    <br>
-                    <textarea rows="5" name="message" id="message" placeholder="What's the fizz?"
-                        required=""></textarea>
-                    <br>
-                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                </fieldset>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-        <div style="width:30%; float:right"></div>
-    </div>
-
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mdkebrpr"
+        method="post">
+        <fieldset id="fs-frm-inputs">
+            <label for="full-name">Full Name</label>
+            <br>
+            <input type="text" name="name" id="full-name" placeholder="Troy Fohrman" required="">
+            <br>
+            <label for="email-address">Email Address</label>
+            <br>
+            <input type="email" name="_replyto" id="email-address" placeholder="info@ipolish.fashion" required="">
+            <br>
+            <label for="message">Message</label>
+            <br>
+            <textarea rows="5" name="message" id="message" placeholder="What's the fizz?" required=""
+                class="form-textarea"></textarea>
+            <br>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
 
     <!-- Footer section -->
     <footer class="homepage-footer">
