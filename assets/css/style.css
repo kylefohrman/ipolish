@@ -285,18 +285,18 @@ input[type=reset] {
         display: flex;
         align-items: center;
         padding-left: 8rem;
-        min-height: 285px;
+        min-height: 200px;
     }
 
     .parallax {
         /* Set a specific height */
-        min-height: 300px;
+        min-height: 250px;
 
         /* Create the parallax scrolling effect */
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
 
         border: 15px white;
         border-style: solid none;
@@ -318,6 +318,11 @@ input[type=reset] {
 
     .motto h1 {
         font-size: 200%;
+    }
+
+    .intro {
+        /* The image used */
+        background-image: url("../images/iPolish\ Everywhere2.jpg");
     }
 
     .instructions {
