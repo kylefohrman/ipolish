@@ -408,4 +408,8 @@ input[type=reset] {
     .intro-image {
         padding: 0% 0%;
     }
+
+    .large-motto {
+        display: none;
+    }
 }
