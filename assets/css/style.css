@@ -319,8 +319,10 @@ input[type=reset] {
         visibility: visible;
         text-align: center;
         margin: auto;
+        margin-left: -7rem !important;
         padding-left: 0 !important;
         padding: 0%;
+        padding-left: 0rem !important;
     }
 
     .app-icon {
