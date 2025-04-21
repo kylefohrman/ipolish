@@ -312,10 +312,10 @@ input[type=reset] {
         min-height: 250px;
 
         /* Create the parallax scrolling effect */
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
 
         border: 15px white;
         border-style: solid none;
