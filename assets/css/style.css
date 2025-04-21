@@ -139,6 +139,10 @@ footer {
     background-image: url("../images/iPolish\ Everywhere.jpg");
 }
 
+.intro-text {
+    margin: 0rem 5rem;
+}
+
 .instructions {
     /* The image used */
     background-image: url("../images/iPolish-folded2.jpg");
@@ -289,12 +293,16 @@ input[type=reset] {
     .motto {
         display: flex;
         align-items: center;
-        padding-left: 8rem;
+        padding-left: 2.5rem;
         min-height: 200px;
     }
 
+    .motto h1 {
+        font-size: 200%;
+    }
+
     .app-icon {
-        max-width: 25px;
+        max-width: 35px;
         margin-right: 10px;
         margin-bottom: 15px;
     }
@@ -323,17 +331,13 @@ input[type=reset] {
         padding-right: 5rem;
     }
 
-    .motto {
-        padding-left: 5rem;
-    }
-
-    .motto h1 {
-        font-size: 200%;
-    }
-
     .intro {
         /* The image used */
         background-image: url("../images/iPolish\ Everywhere2.jpg");
+    }
+
+    .intro-text {
+        margin: 0rem 2.5rem;
     }
 
     .instructions {
