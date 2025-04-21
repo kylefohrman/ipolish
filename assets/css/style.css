@@ -139,6 +139,10 @@ footer {
     background-image: url("../images/iPolish\ Everywhere.jpg");
 }
 
+.intro-image {
+    display: none;
+}
+
 .intro-text {
     margin: 0rem 5rem !important;
 }
@@ -176,6 +180,14 @@ footer {
 
 .motto h1 {
     font-size: 300%;
+}
+
+.large-motto {
+    display: inline-block;
+}
+
+.small-motto {
+    display: none;
 }
 
 .center {
@@ -285,15 +297,9 @@ input[type=reset] {
 }
 
 @media screen and (max-width: 1200px) {
-    .parallax-column {
-        background-color: white;
-        width: 50%;
-    }
-
     .motto {
         display: flex;
         align-items: center;
-        padding-left: 3rem;
         min-height: 200px;
     }
 
@@ -301,9 +307,21 @@ input[type=reset] {
         font-size: 200%;
     }
 
+    .large-motto {
+        display: none;
+    }
+
+    .small-motto {
+        display: inline-block;
+        text-align: center;
+        margin: auto;
+        padding-left: 0 !important;
+        padding: 0%;
+    }
+
     .app-icon {
-        max-width: 35px;
-        margin-right: 10px;
+        max-width: 50px;
+        margin-right: 8%;
         margin-bottom: 15px;
     }
 
@@ -313,12 +331,19 @@ input[type=reset] {
 
         /* Create the parallax scrolling effect */
         background-attachment: scroll;
-        background-position: center;
+        background-position: scroll;
         background-repeat: no-repeat;
         background-size: cover;
 
         border: 15px white;
         border-style: solid none;
+        align-items: center;
+        align-content: center;
+    }
+
+    .parallax-column {
+        background-color: white;
+        width: 100%;
     }
 
     .card-flex {
@@ -333,7 +358,14 @@ input[type=reset] {
 
     .intro {
         /* The image used */
-        background-image: url("../images/iPolish\ Everywhere2.jpg");
+        background-image: none;
+        margin-top: 2% !important;
+    }
+
+    .intro-image {
+        display: inline-block;
+        padding: 0% 15%;
+        max-width: 100%;
     }
 
     .intro-text {
@@ -369,5 +401,11 @@ input[type=reset] {
 
     .burger-menu {
         display: block;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .intro-image {
+        padding: 0% 0%;
     }
 }
