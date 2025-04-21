@@ -184,10 +184,12 @@ footer {
 
 .large-motto {
     display: inline-block;
+    visibility: visible;
 }
 
 .small-motto {
     display: none;
+    visibility: hidden;
 }
 
 .center {
@@ -309,10 +311,12 @@ input[type=reset] {
 
     .large-motto {
         display: none;
+        visibility: hidden;
     }
 
     .small-motto {
         display: inline-block;
+        visibility: visible;
         text-align: center;
         margin: auto;
         padding-left: 0 !important;
