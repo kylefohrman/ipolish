@@ -293,7 +293,7 @@ input[type=reset] {
     .motto {
         display: flex;
         align-items: center;
-        padding-left: 2.5rem;
+        padding-left: 3rem;
         min-height: 200px;
     }
 
@@ -337,7 +337,7 @@ input[type=reset] {
     }
 
     .intro-text {
-        margin: 0rem 2.5rem;
+        margin: 0rem 3rem;
     }
 
     .instructions {
