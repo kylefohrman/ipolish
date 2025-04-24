@@ -28,6 +28,10 @@ html {
     scroll-behavior: smooth;
 }
 
+sup {
+    font-size: 9px;
+}
+
 /* CSS Resets */
 * {
     margin: 0;
