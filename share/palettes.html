@@ -30,7 +30,7 @@
     <div id="fallback" style="display: none">
       <p>
         Couldn't open the iPolish app.
-        <a id="retry-link" href="#">Click here to try again.</a>
+        <button id="retry-button">Click here to try again</button>
       </p>
       <p>
         Or
@@ -71,32 +71,53 @@
         document.getElementById("twitter-description").content = desc;
         document.getElementById("twitter-image").content = image;
       } */
-
       function getPaletteData() {
         try {
           const params = new URLSearchParams(window.location.search);
           const data = params.get("data");
           return data;
         } catch (e) {
+          renderError(e);
           return null;
         }
       }
 
       function redirectToApp(data) {
-        const encodedData = encodeURIComponent(data);
-        console.log("Encoded Data:", encodedData);
-        window.location = `ipolish://palettes?data=${encodedData}`;
-        setTimeout(function () {
-          document.getElementById("fallback").style.display = "block";
-          document.getElementById(
-            "retry-link"
-          ).href = `ipolish://palettes?data=${encodedData}`;
-        }, 500);
+        if (!data) return;
+        try {
+          const encodedData = encodeURIComponent(data);
+          window.location = `ipolish://palettes?data=${encodedData}`;
+        } catch (e) {
+          renderError(e);
+        }
+      }
+
+      function renderError(error) {
+        const p = document.createElement("p");
+        p.textContent =
+          "Error: " + (error && error.message ? error.message : error);
+        document.body.appendChild(p);
       }
 
       const data = getPaletteData();
       // updateMetaTags(palette);
       redirectToApp(data);
+    </script>
+    <script>
+      document
+        .getElementById("retry-button")
+        .addEventListener("click", function () {
+          const params = new URLSearchParams(window.location.search);
+          const data = params.get("data");
+          if (data) {
+            window.location = `ipolish://palettes?data=${encodeURIComponent(
+              data
+            )}`;
+            setTimeout(function () {
+              document.getElementById("fallback").style.display = "block";
+            }, 500);
+          }
+        });
     </script>
   </body>
 </html>
