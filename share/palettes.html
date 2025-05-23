@@ -72,22 +72,18 @@
         document.getElementById("twitter-image").content = image;
       } */
 
-      function decodePaletteData() {
+      function getPaletteData() {
         try {
           const params = new URLSearchParams(window.location.search);
           const data = params.get("data");
-          console.log("Data:", data);
-          if (!data) throw new Error("No data parameter");
-          const decoded = atob(data);
-          const palette = JSON.parse(decoded);
-          return palette;
+          return data;
         } catch (e) {
           return null;
         }
       }
 
-      function redirectToApp(palette) {
-        const encodedData = encodeURIComponent(palette.data);
+      function redirectToApp(data) {
+        const encodedData = encodeURIComponent(data);
         console.log("Encoded Data:", encodedData);
         window.location = `ipolish://palettes?data=${encodedData}`;
         setTimeout(function () {
@@ -98,9 +94,9 @@
         }, 500);
       }
 
-      const palette = decodePaletteData();
+      const data = getPaletteData();
       // updateMetaTags(palette);
-      redirectToApp(palette);
+      redirectToApp(data);
     </script>
   </body>
 </html>
