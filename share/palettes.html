@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#">
+  <head>
+    <title>iPolish Shared Color Palette</title>
+    <meta property="og:title" content="iPolish Shared Color Palette" />
+    <meta
+      property="og:description"
+      content="Check out this color palette on iPolish!"
+    />
+    <meta
+      property="og:image"
+      content="https://ipolish.fashion/img/social/meta.png"
+    />
+    <meta property="og:url" content="https://ipolish.fashion/share/palettes" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="iPolish Color Palette" />
+    <meta
+      name="twitter:description"
+      content="Check out this color palette on iPolish!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://ipolish.fashion/img/social/meta.png"
+    />
+    <meta name="robots" content="noindex" />
+    <meta name="robots" content="noai" />
+  </head>
+  <body>
+    <div id="fallback" style="display: none">
+      <p>
+        Couldn't open the iPolish app.
+        <a id="retry-link" href="#">Click here to try again.</a>
+      </p>
+      <p>
+        Or
+        <span id="store-link"></span>
+        <script>
+          function getStoreLink() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(ua)) {
+              return '<a href="https://play.google.com/store/apps/details?id=com.ipolish.app">download iPolish from Google Play</a>.';
+            }
+            if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+              return '<a href="https://apps.apple.com/">download iPolish from the App Store</a>.';
+            }
+            return "<p>Please open this link on your mobile device.</p>";
+          }
+          document.getElementById("store-link").innerHTML = getStoreLink();
+        </script>
+      </p>
+    </div>
+    <script>
+      // Keeping this here in case we decide to hook this up to our DB.
+      /* function updateMetaTags(palette) {
+        const title = palette?.name
+          ? `iPolish Palette: ${palette.name}`
+          : "iPolish Palette";
+        const desc = palette?.name
+          ? `Check out "${palette.name}" on iPolish!`
+          : "Check out this color palette on iPolish!";
+        const image = "https://ipolish.fashion/path/to/your/image.jpg"; // Replace with your logic for palette image
+        const url = window.location.href;
+
+        document.title = title;
+        document.getElementById("og-title").content = title;
+        document.getElementById("og-description").content = desc;
+        document.getElementById("og-image").content = image;
+        document.getElementById("og-url").content = url;
+        document.getElementById("twitter-title").content = title;
+        document.getElementById("twitter-description").content = desc;
+        document.getElementById("twitter-image").content = image;
+      } */
+
+      function decodePaletteData() {
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const data = params.get("data");
+          console.log("Data:", data);
+          if (!data) throw new Error("No data parameter");
+          const decoded = atob(data);
+          const palette = JSON.parse(decoded);
+          return palette;
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function redirectToApp(palette) {
+        const encodedData = encodeURIComponent(palette.data);
+        console.log("Encoded Data:", encodedData);
+        window.location = `ipolish://palettes?data=${encodedData}`;
+        setTimeout(function () {
+          document.getElementById("fallback").style.display = "block";
+          document.getElementById(
+            "retry-link"
+          ).href = `ipolish://palettes?data=${encodedData}`;
+        }, 500);
+      }
+
+      const palette = decodePaletteData();
+      updateMetaTags(palette);
+      redirectToApp(palette);
+    </script>
+  </body>
+</html>
