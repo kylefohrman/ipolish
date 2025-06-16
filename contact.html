@@ -1,90 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!--TODO: Add Google tag-->
+        <!-- Google tag (gtag.js) -->
 
-<head>
-    <!--TODO: Add Google tag-->
-    <!-- Google tag (gtag.js) -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--CSS Styles -->
+        <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!--CSS Styles -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- Favicons -->
+        <link
+            rel="apple-touch-icon"
+            href="assets/icons/ip-apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/ico"
+            sizes="32x32"
+            href="assets/icons/ip-favicon.ico"
+        />
+        <link
+            rel="icon"
+            type="image/ico"
+            sizes="16x16"
+            href="assets/icons/ip-favicon.ico"
+        />
+        <!--<link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="white" />-->
+        <link rel="shortcut icon" href="assets/icons/ip-favicon.ico" />
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="assets/icons/ip-apple-touch-icon.png" />
-    <link rel="icon" type="image/ico" sizes="32x32" href="assets/icons/ip-favicon.ico" />
-    <link rel="icon" type="image/ico" sizes="16x16" href="assets/icons/ip-favicon.ico" />
-    <!--<link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="white" />-->
-    <link rel="shortcut icon" href="assets/icons/ip-favicon.ico" />
+        <!-- Animate CSS CDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <title>iPolish - Contact</title>
+    </head>
 
-    <!-- Animate CSS CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>iPolish - Contact</title>
-</head>
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <h1><a href="index.html">iPolish</a></h1>
+            <ul class="navigation">
+                <li>
+                    <a href="products/nails.html" class="nav-link"
+                        >Press-On Nails</a
+                    >
+                </li>
+                <li><a href="index.html" class="nav-link">Accessories</a></li>
+                <li>
+                    <a href="contact.html" class="nav-link">Contact iPolish</a>
+                </li>
+            </ul>
+            <button class="burger-menu" id="burger-menu">
+                <ion-icon class="bars" name="menu-outline"></ion-icon>
+                <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
+            </button>
+        </nav>
 
-<body>
-    <!-- Navbar -->
-    <nav>
-        <h1><a href="index.html">iPolish</a></h1>
-        <ul class="navigation">
-            <li><a href="products/nails.html" class="nav-link">Press-On Nails</a></li>
-            <li><a href="index.html" class="nav-link">Accessories</a></li>
-            <li><a href="contact.html" class="nav-link">Contact iPolish</a></li>
-        </ul>
-        <button class="burger-menu" id="burger-menu">
-            <ion-icon class="bars" name="menu-outline"></ion-icon>
-            <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
-        </button>
-    </nav>
+        <h1 style="text-align: center; padding-top: 5rem">Contact Us</h1>
 
-    <h1 style="text-align: center; padding-top:5rem;">Contact Us</h1>
+        <!-- TODO: Change form email to send to info@ipolish.fashion -->
+        <form
+            id="fs-frm"
+            name="simple-contact-form"
+            accept-charset="utf-8"
+            action="https://formspree.io/f/mdkebrpr"
+            method="post"
+        >
+            <fieldset id="fs-frm-inputs">
+                <label for="full-name">Full Name</label>
+                <br />
+                <input
+                    type="text"
+                    name="name"
+                    id="full-name"
+                    placeholder="Troy Fohrman"
+                    required=""
+                />
+                <br />
+                <label for="email-address">Email Address</label>
+                <br />
+                <input
+                    type="email"
+                    name="_replyto"
+                    id="email-address"
+                    placeholder="info@ipolish.fashion"
+                    required=""
+                />
+                <br />
+                <label for="message">Message</label>
+                <br />
+                <textarea
+                    rows="5"
+                    name="message"
+                    id="message"
+                    placeholder="What's the fizz?"
+                    required=""
+                    class="form-textarea"
+                ></textarea>
+                <br />
+                <input
+                    type="hidden"
+                    name="_subject"
+                    id="email-subject"
+                    value="Contact Form Submission"
+                />
+            </fieldset>
+            <input type="submit" value="Submit" />
+        </form>
 
-    <!-- TODO: Change form email to send to info@ipolish.fashion -->
-    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mdkebrpr"
-        method="post">
-        <fieldset id="fs-frm-inputs">
-            <label for="full-name">Full Name</label>
-            <br>
-            <input type="text" name="name" id="full-name" placeholder="Troy Fohrman" required="">
-            <br>
-            <label for="email-address">Email Address</label>
-            <br>
-            <input type="email" name="_replyto" id="email-address" placeholder="info@ipolish.fashion" required="">
-            <br>
-            <label for="message">Message</label>
-            <br>
-            <textarea rows="5" name="message" id="message" placeholder="What's the fizz?" required=""
-                class="form-textarea"></textarea>
-            <br>
-            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-        </fieldset>
-        <input type="submit" value="Submit">
-    </form>
+        <!-- Footer section -->
+        <footer class="homepage-footer">
+            <div class="footer-quicklinks">
+                <a class="footer-link" href="story.html">Our Story</a>
+                <a class="footer-link" href="story/purpose.html"
+                    >Profits for Purpose</a
+                >
+                <a class="footer-link" href="legal/privacy.html"
+                    >Privacy and Security</a
+                >
+                <a class="footer-link" href="story/warranty.html"
+                    >Warranty Information</a
+                >
+                <a class="footer-link" href="contact.html">Contact Us</a>
+            </div>
+            <br />
+            <p class="copy">iPolish, Inc.</p>
+            <p class="copy">&copy; 2025. All rights reserved.</p>
+        </footer>
 
-    <!-- Footer section -->
-    <footer class="homepage-footer">
-        <div class="footer-quicklinks">
-            <a class="footer-link" href="story.html">Our Story</a>
-            <a class="footer-link" href="story/purpose.html">Profits for Purpose</a>
-            <a class="footer-link" href="story/privacy.html">Privacy and
-                Security</a>
-            <a class="footer-link" href="story/warranty.html">Warranty
-                Information</a>
-            <a class="footer-link" href="contact.html">Contact Us</a>
-        </div>
-        <br>
-        <p class="copy">iPolish, Inc.</p>
-        <p class="copy">&copy; 2025. All rights reserved.</p>
-    </footer>
+        <!-- Website scripts -->
+        <script src="assets/scripts/index-script.js"></script>
 
-    <!-- Website scripts -->
-    <script src="assets/scripts/index-script.js"></script>
-
-    <!-- Ion icons scripts -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+        <!-- Ion icons scripts -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
 </html>
