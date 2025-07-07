@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#">
+  <head>
+    <title>iPolish Shared Color Palette</title>
+    <meta property="og:title" content="iPolish Shared Color Palette" />
+    <meta
+      property="og:description"
+      content="Check out this color palette on iPolish!"
+    />
+    <meta
+      property="og:image"
+      content="https://ipolish.fashion/img/social/meta.png"
+    />
+    <meta property="og:url" content="https://ipolish.fashion/share/palettes" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="iPolish Color Palette" />
+    <meta
+      name="twitter:description"
+      content="Check out this color palette on iPolish!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://ipolish.fashion/img/social/meta.png"
+    />
+    <meta name="robots" content="noindex" />
+    <meta name="robots" content="noai" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      href="https://ipolish.fashion/assets/icons/ip-apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/ico"
+      sizes="32x32"
+      href="https://ipolish.fashion/assets/icons/ip-favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/ico"
+      sizes="16x16"
+      href="https://ipolish.fashion/assets/icons/ip-favicon.ico"
+    />
+    <!--<link rel="mask-icon" href="https://ipolish.fashion/assets/icons/safari-pinned-tab.svg" color="white" />-->
+    <link
+      rel="shortcut icon"
+      href="https://ipolish.fashion/assets/icons/ip-favicon.ico"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        color: #333;
+      }
+
+      #fallback {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #2d3748;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+        color: #4a5568;
+      }
+
+      #retry-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 12px;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 16px 32px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        width: 100%;
+        margin-bottom: 20px;
+        text-transform: none;
+        letter-spacing: 0.5px;
+      }
+
+      #retry-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(102, 126, 234, 0.4);
+      }
+
+      #retry-button:active {
+        transform: translateY(0);
+      }
+
+      #store-link a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
+      }
+
+      #store-link a:hover {
+        border-bottom-color: #667eea;
+      }
+
+      .secondary-text {
+        font-size: 14px;
+        color: #718096;
+        margin-top: 16px;
+      }
+
+      @media (max-width: 480px) {
+        #fallback {
+          padding: 30px 20px;
+          margin: 10px;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+
+        #retry-button {
+          font-size: 16px;
+          padding: 14px 24px;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        #fallback {
+          background: rgba(26, 32, 44, 0.95);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+          color: #f7fafc;
+        }
+
+        p {
+          color: #e2e8f0;
+        }
+
+        .secondary-text {
+          color: #a0aec0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fallback">
+      <h1>Open in iPolish</h1>
+      <p>Ready to view your color palette in the iPolish app?</p>
+      <button id="retry-button">Open iPolish App</button>
+      <div class="secondary-text">
+        Don't have the app?
+        <span id="store-link"></span>
+      </div>
+      <script>
+        function getStoreLink() {
+          const ua = navigator.userAgent || navigator.vendor || window.opera;
+          if (/android/i.test(ua)) {
+            return '<a href="https://play.google.com/store/apps/details?id=com.ipolish.app">Download from Google Play</a>';
+          }
+          if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+            return '<a href="https://apps.apple.com/">Download from App Store</a>';
+          }
+          return "Please open this link on your mobile device";
+        }
+        document.getElementById("store-link").innerHTML = getStoreLink();
+      </script>
+    </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("retry-button")
+          .addEventListener("click", function () {
+            const params = new URLSearchParams(window.location.search);
+            const data = params.get("data");
+            if (data) {
+              window.location = `ipolish://palettes?data=${encodeURIComponent(
+                data
+              )}`;
+              setTimeout(function () {
+                document.getElementById("fallback").style.display = "block";
+              }, 500);
+            }
+          });
+      });
+    </script>
+    <script>
+      // Keeping this here in case we decide to hook this up to our DB.
+      /* function updateMetaTags(palette) {
+        const title = palette?.name
+          ? `iPolish Palette: ${palette.name}`
+          : "iPolish Palette";
+        const desc = palette?.name
+          ? `Check out "${palette.name}" on iPolish!`
+          : "Check out this color palette on iPolish!";
+        const image = "https://ipolish.fashion/path/to/your/image.jpg"; // Replace with your logic for palette image
+        const url = window.location.href;
+
+        document.title = title;
+        document.getElementById("og-title").content = title;
+        document.getElementById("og-description").content = desc;
+        document.getElementById("og-image").content = image;
+        document.getElementById("og-url").content = url;
+        document.getElementById("twitter-title").content = title;
+        document.getElementById("twitter-description").content = desc;
+        document.getElementById("twitter-image").content = image;
+      } */
+      function getPaletteData() {
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const data = params.get("data");
+          return data;
+        } catch (e) {
+          console.error("Error fetching palette data:", e);
+          return null;
+        }
+      }
+
+      function redirectToApp(data) {
+        if (!data) return;
+        try {
+          const encodedData = encodeURIComponent(data);
+          //window.location = `ipolish://palettes?data=${encodedData}`;
+        } catch (e) {
+          console.error("Error redirecting to app:", e);
+        }
+      }
+
+      const data = getPaletteData();
+      // updateMetaTags(palette);
+      redirectToApp(data);
+    </script>
+  </body>
+</html>
