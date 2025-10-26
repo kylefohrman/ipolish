@@ -1,4 +1,4 @@
 # ipolish
-Entry page for iPolish.fashion
+Former entry page for iPolish.fashion, created as a placeholder.
 
 Confidential and proprietary
